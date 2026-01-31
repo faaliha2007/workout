@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Workout</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+       ::-webkit-scrollbar {
+              display: none;
+       }
+</style>
+
+
+<body class="bg-black">
+
+
+       <!--header-->
+       <section
+              class="flex justify-between  items-center bg-[#2b0f14] shadow-red-200 border-b border-red-100 sticky top-0 z-[9999]">
+              <h1 class="max-w-6xl  flex-none px-5 py-6 font-bold text-3xl text-white">Hustle Fitness</h1>
+
+              <p id="navicon" class="cursor-pointer text-white md:hidden p-4 font-bold">☰</p>
+              <div class="flex gap-4 text-gray-200 font-medium px-2 hidden md:flex">
+                     <a href="#" class="hover:text-red-400 cursor-pointer">Home</a>
+                     <a href="#" class="hover:text-red-400 cursor-pointer">About</a>
+                     <a href="#" class="hover:text-red-400 cursor-pointer">Workout</a>
+                     <a href="#" class="hover:text-red-400 cursor-pointer">Diet</a>
+                     <a href="#" class="hover:text-red-400 cursor-pointer">Contact</a>
+              </div>
+
+       </section>
+
+
+
+
+
+
+
+
+       <!--resnavbar-->
+       <section id="resnav" class="bg-red-100  top-0  fixed z-[10000] transform transition-all duration-1000"
+              style="width:50%; height:100vh; right:-50%">
+              <div id="cross" class="text-right p-5">
+                     <p id="closetag" class="inline font-bold cursor-pointer hover:text-red-500">X</p>
+              </div>
+              <div class="flex flex-col gap-4 text-gray-200 font-medium px-4 md:flex">
+                     <a href="#" class="text-red-400 cursor-pointer hover:text-black">Home</a>
+                     <a href="#" class="text-red-400 cursor-pointer hover:text-black">About</a>
+                     <a href="#" class="text-red-400 cursor-pointer hover:text-black">Workout</a>
+                     <a href="#" class="text-red-400 cursor-pointer hover:text-black">Diet</a>
+                     <a href="#" class="text-red-400 cursor-pointer hover:text-black">Contact</a>
+
+       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <!--img-->
+       <section class="relative max-w-6xl p-6 mx-auto">
+              <div class="relative rounded-3xl mt-8 overflow-hidden shadow ">
+                     <img src="./work12.jpg" class="w-full h-80 object-cover" alt="fitness hero">
+                     <h1 class="font-bold text-3xl absolute top-10 px-8 py-6 text-white">Train Like a Champion</h1>
+                     <p class="absolute top-20 p-8 text-white text-lg pb-10">Get Your daily workout plan</p>
+
+                     <button class="px-6 py-3 bg-white rounded-3xl text-red-400 font-bold mt-20  absolute top-20 left-8 hover:bg-red-600 hover:text-white hover:border hover:border-red-400 hover:shadow-lg transition duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95"
+                            id="srttoday">Start
+                            Today</button>
+                     <div class="flex gap-5 absolute bottom-6 left-8">
+                            <div class=" py-2 px-4 rounded-2xl bg-white text-black shadow" id="calmsg"> 🔥320 kcal</div>
+                            <div class=" py-2 px-4 rounded-2xl bg-white text-black shadow" id="timemsg">🕒 45 min</div>
+
+                            <!--dropdown-->
+                            <div class="py-2 px-4 rounded-2xl bg-white text-black shadow">
+                                   <select id="level" class="outline-none">
+                                          <option value="all">All</option>
+                                          <option value="basic">Basic</option>
+                                          <option value="intermediate">Intermediate</option>
+                                          <option value="high">High</option>
+                                   </select>
+
+                            </div>
+
+                     </div>
+
+
+       </section>
+
+       <!--scroll-->
+       <section class="trending">
+              <h2 class="font-bold text-2xl p-6 text-white">Trending Workout</h2>
+
+       </section>
+
+
+
+       <section class="flex p-6 items-center justify-between overflow-x-auto gap-5 pb-3 scroll-smooth">
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="basic">
+                     <img src="./work3.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Full Body Blast</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Basic</p>
+              </div>
+
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="intermediate">
+                     <img src="./work10.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Streching</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Intermediate</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="high">
+                     <img src="./work11.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Jogging</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • High</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="basic">
+                     <img src="./work15.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Thumbles</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Basic</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="intermediate">
+                     <img src="./work12.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Jogging</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Intermediate</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="intermediate">
+                     <img src="./work14.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Cycling</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Intermediate</p>
+              </div>
+
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard cursor-pointer allcard cursor-pointer"
+                     data-level="high">
+                     <img src="./gymfit2.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Tredmilling</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • High</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="basic">
+                     <img src="./work5.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Push-ups</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Basic</p>
+              </div>
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="intermediate">
+                     <img src="./work1.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Uplifting</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Intermediate</p>
+              </div>
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="high">
+                     <img src="./work6.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Weight Lifting</p>
+                     <p class="text-gray-600 text-sm mb-2">45 min • High</p>
+              </div>
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="basic">
+                     <img src="./work7.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Full Body Blast</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Basic</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="intermediate">
+                     <img src="./work13.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Warm-up</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • Intermediate</p>
+              </div>
+
+
+              <div class="flex-none rounded-3xl shadow hover:-translate-y-2 hover:shadow-xl  bg-white border border-gray-100 shadow-lg p-4 transition-all duration-300 ease-out trendingcard allcard cursor-pointer"
+                     data-level="high">
+                     <img src="./work9.jpg" class="rounded-2xl w-full h-44 object-cover" alt="workout2">
+
+                     <p class="font-bold pt-4 text-red-500">Full Body Blast</p>
+                     <p class="text-gray-500 text-sm mb-2">45 min • High</p>
+              </div>
+       </section>
+
+       <!--featured-->
+       <section class="bg-white shadow-lg p-8 m-6 rounded-3xl">
+
+              <h1 class="text-2xl font-bold">Featured Workout</h1>
+              <p class="text-sm text-gray-700">Try this workout for fast results and muscle gain</p>
+              <button class="p-4 mt-8 bg-red-100   rounded-3xl text-white font-bold hover:bg-red-400 transition duration-300 hover:-translate-y-1 hover:scale-105 active:scale-95"
+                     id="srttodaybtn">Start
+                     Today</button>
+       </section>
+
+       <!--timer-->
+       <section class="bg-white shadow-lg p-8 m-6 rounded-3xl timepart">
+
+              <h1 class="text-2xl font-bold p-2">Workout Timer</h1>
+              <p class="text-sm text-gray-700">Start your session and stay consistent</p>
+              <div class="text-center text-red-500 font-bold text-5xl p-4">
+                     <span id="mins">45</span>:<span id="secs">00</span>
+              </div>
+              <div class="flex items-center gap-6 justify-center">
+                     <button class=" px-6 py-3 mt-6 bg-red-400 rounded-3xl text-white font-bold hover:bg-red-600 transition duration-300 hover:-translate-y-1"
+                            id="srtbtn">Start</button>
+                     <button class=" px-6 py-3 mt-6 bg-red-200 rounded-3xl text-red-400 font-bold hover:bg-red-100 transition duration-300 hover:-translate-y-1"
+                            id="resetbtn">Reset</button>
+              </div>
+       </section>
+       <!--streak-->
+       <section class="bg-white shadow-lg p-8 m-6 rounded-3xl flex items-center justify-between">
+              <div>
+                     <h1 class="text-2xl font-bold ">Day Streak</h1>
+                     <p class="text-gray-700">Keep your streak alive by completing daily workouts.</p>
+              </div>
+              <button class=" p-4 mt-6 bg-red-400 rounded-3xl text-white font-bold hover:bg-red-400 transition duration-300 hover:-translate-y-1"
+                     id="daysrk">0
+                     Day</button>
+       </section>
+
+       <!--workout-->
+       <section class="max-w-6xl mx-auto p-6 mt-10 excercise">
+              <div class="grid md:grid-cols-3 gap-10 grid-cols-2">
+
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="basic">
+                            <img src="./pushup.jpg" class="rounded-2xl w-full h-64 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="intermediate">
+                            <img src="./thumbles.jpg"
+                                   class="rounded-2xl w-full h-64 h-34 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="high">
+                            <img src="./weight.jpg" class="rounded-2xl w-full h-64 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="basic">
+                            <img src="./gym.jpg" class="rounded-2xl w-full h-64 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="intermediate">
+                            <img src="./gymfit4.jpg" class="rounded-2xl w-full h-64 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+
+
+                     <div class="group flex-none rounded-3xl shadow hover:-translate-y-1 bg-white shadow-lg p-4 workoutcard allcard hover:shadow-red-200 cursor-pointer"
+                            data-level="high">
+                            <img src="./gymfit3.jpg" class="rounded-2xl w-full h-64 object-cover group-hover:scale-105"
+                                   alt="workout2">
+
+                            <p class="font-bold pt-4">Full Body Blast</p>
+                            <p class="text-gray-600 text-sm mb-2">45 min • Intermediate</p>
+                     </div>
+
+                     <!--toast-->
+                     <div class="rounded-xl px-4 py-3 shadow-xl bg-white text-red-400 fixed top-6 left-1/2  opacity-0"
+                            id="toast">Workout Completed</div>
+
+</div>
+</section>
+<!--footer-->
+<section class="max-w-6xl mx-auto mt-10 p-6 shadow-red-200">
+<div class="flex items-center justify-center gap-20 w-full">
+<!--left--->
+<div class="flex flex-col gap-5 text-red-600 ">
+       <p>About us</p>
+       <p>Delivery Information</p>
+       <p>Privacy Policy</p>
+       <p>Terms & Condition</p>
+       <p>Contact Us</p>
+</div>
+
+<div class="flex flex-col gap-5 text-red-600">
+       <p>sign In</p>
+       <p>View Cart</p>
+       <p>My Wishlist</p>
+       <p>Track My Order</p>
+       <p>Help</p>
+</div>
+
+
+</div>
+</section>       
+
+                     <script src="workout.js"></script>
+
+</body>
+
+</html>
